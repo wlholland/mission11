@@ -1,0 +1,18 @@
+# .NET
+bin/
+obj/
+*.user
+.vs/
+
+# Node
+node_modules/
+
+# SQLite (usually committed for school projects — remove this line if you want to include it)
+# *.sqlite
+
+# Vite build output
+frontend/dist/
+
+# dotnet secrets
+appsettings.*.json
+!appsettings.Development.json
