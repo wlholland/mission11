@@ -13,6 +13,9 @@ node_modules/
 # Vite build output
 frontend/dist/
 
+# Claude Code memory
+.claude/
+
 # dotnet secrets
 appsettings.*.json
 !appsettings.Development.json
