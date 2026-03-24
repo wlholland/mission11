@@ -76,18 +76,12 @@ export default function CartPage() {
           </div>
 
           <div className="row">
-            <div className="col d-flex justify-content-between">
+            <div className="col">
               <button
                 className="btn btn-outline-danger"
                 onClick={clearCart}
               >
                 Clear Cart
-              </button>
-              <button
-                className="btn btn-primary"
-                onClick={() => navigate(-1)}
-              >
-                &larr; Continue Shopping
               </button>
             </div>
           </div>
