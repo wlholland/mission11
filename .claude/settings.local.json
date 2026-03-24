@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet new:*)",
+      "Bash(dotnet sln:*)",
+      "Bash(dotnet --version)",
+      "Bash(dotnet add:*)",
+      "Bash(python3 -c \":*)",
+      "Bash(npm create:*)"
+    ]
+  }
+}
