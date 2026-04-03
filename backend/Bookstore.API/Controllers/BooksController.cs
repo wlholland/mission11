@@ -59,5 +59,43 @@ namespace Bookstore.API.Controllers
 
             return Ok(categories);
         }
+
+        [HttpPost("addBook")]
+        public IActionResult AddBook([FromBody] Book newBook)
+        {
+            _bookContext.Books.Add(newBook);
+            _bookContext.SaveChanges();
+            return Ok(newBook);
+        }
+
+        [HttpPut("updateBook/{bookId}")]
+        public IActionResult UpdateBook(int bookId, [FromBody] Book updatedBook)
+        {
+            var existing = _bookContext.Books.Find(bookId);
+            if (existing == null) return NotFound();
+
+            existing.Title = updatedBook.Title;
+            existing.Author = updatedBook.Author;
+            existing.Publisher = updatedBook.Publisher;
+            existing.ISBN = updatedBook.ISBN;
+            existing.Classification = updatedBook.Classification;
+            existing.Category = updatedBook.Category;
+            existing.PageCount = updatedBook.PageCount;
+            existing.Price = updatedBook.Price;
+
+            _bookContext.SaveChanges();
+            return Ok(existing);
+        }
+
+        [HttpDelete("deleteBook/{bookId}")]
+        public IActionResult DeleteBook(int bookId)
+        {
+            var book = _bookContext.Books.Find(bookId);
+            if (book == null) return NotFound();
+
+            _bookContext.Books.Remove(book);
+            _bookContext.SaveChanges();
+            return NoContent();
+        }
     }
 }

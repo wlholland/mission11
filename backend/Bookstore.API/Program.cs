@@ -18,7 +18,11 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.UseCors(x => x.WithOrigins("http://localhost:3000"));
+// Updating CORS policy to allow PUT/POST/DELETE per Prof Hilton's guidance.
+app.UseCors(x => x
+    .WithOrigins("http://localhost:3000", "http://localhost:3001")
+    .AllowAnyMethod()
+    .AllowAnyHeader());
 
 app.UseHttpsRedirection();
 
