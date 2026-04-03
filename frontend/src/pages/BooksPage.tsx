@@ -24,7 +24,7 @@ export default function BooksPage() {
 
   // Fetch distinct categories once on mount
   useEffect(() => {
-    fetch('http://localhost:5106/Books/GetCategories')
+    fetch('https://bookstore-api-willholland.azurewebsites.net/Books/GetCategories')
       .then((r) => r.json())
       .then((data: string[]) => setAllCategories(data))
       .catch(console.error);
@@ -40,7 +40,7 @@ export default function BooksPage() {
       .getAll('category')
       .forEach((c) => params.append('categories', encodeURIComponent(c)));
 
-    fetch(`http://localhost:5106/Books/GetBooks?${params.toString()}`)
+    fetch(`https://bookstore-api-willholland.azurewebsites.net/Books/GetBooks?${params.toString()}`)
       .then((r) => r.json())
       .then((data: BooksResponse) => {
         setBooks(data.books);

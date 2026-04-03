@@ -1,6 +1,6 @@
 import type { Book } from '../types/Book';
 
-const BASE_URL = 'http://localhost:5106/Books';
+const BASE_URL = 'https://bookstore-api-willholland.azurewebsites.net/Books';
 
 export async function addBook(book: Book): Promise<Book> {
   try {

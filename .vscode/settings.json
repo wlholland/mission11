@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/165a2773-e829-47aa-be1d-53746eb2aa06/resourceGroups/will_rg_9377/providers/Microsoft.Web/sites/bookstore-api-willholland",
+    "appService.deploySubpath": "."
+}

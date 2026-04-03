@@ -4,7 +4,7 @@ import { deleteBook } from '../api/booksAPI';
 import NewBookForm from '../components/NewBookForm';
 import EditBookForm from '../components/EditBookForm';
 
-const BASE_URL = 'http://localhost:5106/Books';
+const BASE_URL = 'https://bookstore-api-willholland.azurewebsites.net/Books';
 const DEFAULT_PAGE_SIZE = 10;
 
 export default function AdminBooksPage() {
