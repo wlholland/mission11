@@ -20,7 +20,7 @@ if (app.Environment.IsDevelopment())
 
 // Updating CORS policy to allow PUT/POST/DELETE per Prof Hilton's guidance.
 app.UseCors(x => x
-    .WithOrigins("http://localhost:3000", "http://localhost:3001")
+    .WithOrigins("http://localhost:3000", "http://localhost:3001", "https://purple-sky-0fe398003.2.azurestaticapps.net")
     .AllowAnyMethod()
     .AllowAnyHeader());
 
